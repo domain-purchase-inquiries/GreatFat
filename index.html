@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreatFat.com - Coming Soon</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .top, .middle, .bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            flex: 1; /* Ensure each section takes up 1/3 of the height */
+        }
+
+        h1 {
+            font-size: 4em; /* Increase the font size for h1 */
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .avocado {
+            font-size: 5em;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .contact {
+            font-size: 1em;
+        }
+
+        .contact a {
+            color: #007bff;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h1>GreatFat.com</h1>
+        <h2>Coming Soon...</h2>
+    </div>
+    <div class="middle">
+        <div id="avocado" class="avocado">🥑</div>
+    </div>
+    <div class="bottom">
+        <div class="contact">
+            <p>Interested in buying this domain before it's developed? Send me a message at domain.purchase.inquiries@pm.me 
+            <a href="mailto:domain.purchase.inquiries@pm.me?subject=GreatFat.com%20Purchase%20Inquiry&body=I%20am%20interested%20in%20purchasing%20the%20domain%20GreatFat.com.%20Please%20contact%20me%20with%20more%20information.">
+                or send me a pre-written email.
+            </a>
+			</p>
+        </div>
+    </div>
+
+    <script>
+        function getRandomSize() {
+            const sizes = ['2em', '4em', '6em'];
+            return sizes[Math.floor(Math.random() * sizes.length)];
+        }
+
+        function getRandomTransform() {
+            const transforms = [
+                'none',
+                'scaleX(-1)'
+            ];
+            return transforms[Math.floor(Math.random() * transforms.length)];
+        }
+
+        function changeAvocadoState() {
+            const avocado = document.getElementById('avocado');
+            avocado.style.fontSize = getRandomSize();
+            avocado.style.transform = getRandomTransform();
+        }
+
+        setInterval(changeAvocadoState, 1000);
+    </script>
+</body>
+</html>
